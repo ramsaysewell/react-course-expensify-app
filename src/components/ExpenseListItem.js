@@ -2,23 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import numeral from 'numeral';
+import localeData from 'numeral/locales/en-gb';
 
-numeral.register('locale', 'gbp', {
-	delimiters: {
-		thousands: ',',
-		decimal: '.',
-	},
-	abbreviations: {
-		thousand: 'k',
-		million: 'm',
-		billion: 'b',
-		trillion: 't',
-	},
-	currency: {
-		symbol: '£',
-	},
-});
-numeral.locale('gbp');
+numeral.locale('en-gb');
 
 const ExpenseListItem = ({ dispatch, id, description, amount, createdAt }) => (
 	<div>
