@@ -1,5 +1,5 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'test') {
 module.exports = (env) => {
 	const isProduction = env === 'production';
 	return {
-		entry: './src/app.js',
+		entry: ['babel-polyfill', './src/app.js'],
 		output: {
 			path: path.join(__dirname, 'public', 'dist'),
 			filename: 'bundle.js',
@@ -30,14 +30,41 @@ module.exports = (env) => {
 					exclude: /node_modules/,
 				},
 				{
-					test: /\.(sa|sc|c)ss$/,
-					use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+					test: /\.(png|jpg)$/,
+					loader: 'url-loader'
+				},
+				{
+					test: /\.s?css$/,
+					use: [
+						// fallback to style-loader in development
+						{
+							loader: 'style-loader',
+						},
+						{
+							loader: 'css-loader',
+							options: {
+								sourceMap: true,
+								url: false
+							}
+						},
+						{
+							loader: 'resolve-url-loader',
+							options: {
+								sourceMap: true,
+								removeCR: true
+							}
+						},
+						{
+							loader: 'sass-loader',
+							options: {
+								sourceMap: true
+							}
+						},
+					],
 				},
 			],
 		},
-		plugins: [new MiniCssExtractPlugin({
-			filename: 'styles.css'
-		}),
+		plugins: [new MiniCSSExtractPlugin(),
 		new webpack.DefinePlugin({
 			'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
 			'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),

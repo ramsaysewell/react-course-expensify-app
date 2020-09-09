@@ -1,0 +1,117 @@
+.
+├── jest.config.json
+├── package-lock.json
+├── package.json
+├── project.txt
+├── public
+│   ├── dist
+│   │   ├── bundle.js
+│   │   ├── bundle.js.map
+│   │   ├── main.css
+│   │   ├── main.css.map
+│   │   ├── styles.css
+│   │   └── styles.css.map
+│   ├── images
+│   │   ├── bg.jpg
+│   │   ├── favicon.png
+│   │   └── loader.gif
+│   └── index.html
+├── server
+│   └── server.js
+├── src
+│   ├── actions
+│   │   ├── auth.js
+│   │   ├── expenses.js
+│   │   └── filters.js
+│   ├── app.js
+│   ├── components
+│   │   ├── AddExpensePage.js
+│   │   ├── EditExpensePage.js
+│   │   ├── ExpenseDashboardPage.js
+│   │   ├── ExpenseForm.js
+│   │   ├── ExpenseList.js
+│   │   ├── ExpenseListFilters.js
+│   │   ├── ExpenseListItem.js
+│   │   ├── ExpensesSummary.js
+│   │   ├── Header.js
+│   │   ├── LoginPage.js
+│   │   └── NotFoundPage.js
+│   ├── firebase
+│   │   └── firebase.js
+│   ├── playground
+│   │   ├── hoc.js
+│   │   ├── promises.js
+│   │   ├── redux-101.js
+│   │   └── redux-expensify.js
+│   ├── reducers
+│   │   ├── auth.js
+│   │   ├── expenses.js
+│   │   └── filters.js
+│   ├── routers
+│   │   ├── AppRouter.js
+│   │   ├── PrivateRoute.js
+│   │   └── PublicRoute.js
+│   ├── selectors
+│   │   ├── expenses-total.js
+│   │   └── expenses.js
+│   ├── store
+│   │   └── configureStore.js
+│   ├── styles
+│   │   ├── base
+│   │   │   ├── _base.scss
+│   │   │   └── _settings.scss
+│   │   ├── components
+│   │   │   ├── _box-layout.scss
+│   │   │   ├── _button.scss
+│   │   │   ├── _content-container.scss
+│   │   │   ├── _form.scss
+│   │   │   ├── _header.scss
+│   │   │   ├── _input-group.scss
+│   │   │   ├── _inputs.scss
+│   │   │   └── _page-header.scss
+│   │   └── styles.scss
+│   └── tests
+│       ├── __mocks__
+│       │   └── moment.js
+│       ├── actions
+│       │   ├── auth.test.js
+│       │   ├── expenses.test.js
+│       │   └── filters.test.js
+│       ├── components
+│       │   ├── AddExpensePage.test.js
+│       │   ├── EditExpensePage.test.js
+│       │   ├── ExpenseDashboardPage.test.js
+│       │   ├── ExpenseForm.test.js
+│       │   ├── ExpenseList.test.js
+│       │   ├── ExpenseListFilters.test.js
+│       │   ├── ExpenseListItem.test.js
+│       │   ├── ExpensesSummary.test.js
+│       │   ├── Header.test.js
+│       │   ├── LoginPage.test.js
+│       │   ├── NotFoundPage.test.js
+│       │   └── __snapshots__
+│       │       ├── AddExpensePage.test.js.snap
+│       │       ├── EditExpensePage.test.js.snap
+│       │       ├── ExpenseDashboardPage.test.js.snap
+│       │       ├── ExpenseForm.test.js.snap
+│       │       ├── ExpenseList.test.js.snap
+│       │       ├── ExpenseListFilters.test.js.snap
+│       │       ├── ExpenseListItem.test.js.snap
+│       │       ├── ExpensesSummary.test.js.snap
+│       │       ├── Header.test.js.snap
+│       │       ├── LoginPage.test.js.snap
+│       │       └── NotFoundPage.test.js.snap
+│       ├── fixtures
+│       │   ├── expenses.js
+│       │   └── filters.js
+│       ├── reducers
+│       │   ├── auth.test.js
+│       │   ├── expenses.test.js
+│       │   └── filters.test.js
+│       ├── selectors
+│       │   ├── expenses-total.test.js
+│       │   └── expenses.test.js
+│       └── setupTests.js
+└── webpack.config.js
+
+24 directories, 90 files
