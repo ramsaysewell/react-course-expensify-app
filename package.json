@@ -51,7 +51,7 @@
 		"sass-loader": "^7.1.0",
 		"style-loader": "^1.2.1",
 		"uuid": "^8.3.0",
-		"validator": "13.1.1",
+		"validator": "13.7.0",
 		"webpack": "4.44.1",
 		"webpack-cli": "^3.3.12"
 	},
